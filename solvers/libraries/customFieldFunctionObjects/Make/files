@@ -1,0 +1,8 @@
+absorbedMassFlux/absorbedMassFlux.C
+absorbedMassFluxObject/absorbedMassFluxObject.C
+sensibleHeatFlux/sensibleHeatFlux.C
+sensibleHeatFluxDensityObject/sensibleHeatFluxDensityObject.C
+sensibleHeatFluxScalarTransport/sensibleHeatFluxScalarTransport.C
+sensibleHeatFlowRateScalarTransport/sensibleHeatFlowRateScalarTransport.C
+
+LIB = $(FOAM_USER_LIBBIN)/customFieldFunctionObjects

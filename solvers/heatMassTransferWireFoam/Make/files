@@ -1,0 +1,8 @@
+heatMassTransferControl/heatMassTransferControl.C
+pimpleMultiFluidRegionControl/pimpleMultiFluidRegionControl.C
+
+fluid/icoCourantNo.C
+
+heatMassTransferWireFoam.C
+
+EXE = $(FOAM_USER_APPBIN)/heatMassTransferWireFoam

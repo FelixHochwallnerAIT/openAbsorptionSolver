@@ -1,0 +1,70 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  7
+     \\/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    location    "system";
+    object      fvSchemes;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+ddtSchemes
+{
+    default         steadyState;
+}
+
+gradSchemes
+{
+    default         Gauss linear;
+	// A bit less accurate
+	grad(cw)        cellLimited Gauss linear 1;
+	grad(T)        	Gauss linear;
+	// A bit less accurate
+	//grad(cw)          Gauss linear;
+	//grad(T)        	Gauss linear;
+	// More accurate
+	//grad(cw)        leastSquares;
+	//grad(T)        	leastSquares;
+}
+
+divSchemes
+{
+    default         none;
+	
+	// Only first order accurate but stable
+  	div(phi,cw)   bounded Gauss upwind;
+	div(phi,T)    bounded Gauss upwind;
+	
+	// Very accurate, second order, but unstable
+  	//div(phi,cw)     Gauss limitedLinear 1;
+	//div(phi,T)	Gauss limitedLinear 1;
+	
+	// Second order accurate but more stable
+	//div(phi,cw)	Gauss linearUpwind grad(cw);
+	//div(phi,T)		Gauss linearUpwind grad(T);
+}
+
+laplacianSchemes
+{
+    default         Gauss linear orthogonal;
+}
+
+interpolationSchemes
+{
+    default         linear;
+}
+
+snGradSchemes
+{
+    default        	orthogonal;
+}
+
+
+// ************************************************************************* //

@@ -1,0 +1,8 @@
+coupleManager/coupleManager.C
+regionCoupleTemperature/regionCoupleTemperatureFvPatchScalarField.C
+regionCoupleVaporPressure/regionCoupleVaporPressureFvPatchScalarField.C
+regionCoupleHeatFluxLatent/regionCoupleHeatFluxLatentFvPatchScalarField.C
+regionCoupleMassFluxPicard/regionCoupleMassFluxPicardFvPatchScalarField.C
+regionCoupleMassFlux/regionCoupleMassFluxFvPatchScalarField.C
+
+LIB = $(FOAM_USER_LIBBIN)/customBoundaryConditions

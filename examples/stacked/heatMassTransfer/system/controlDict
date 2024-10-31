@@ -1,0 +1,180 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  7
+     \\/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    location    "system";
+    object      controlDict;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+application     heatMassTransferFoam;
+
+startFrom       latestTime;
+//startFrom       startTime;
+
+startTime       0;
+
+stopAt          endTime;
+
+endTime         10000;
+
+deltaT          1;
+
+writeControl    timeStep;
+
+writeInterval   100;
+
+purgeWrite      2;
+
+writeFormat     ascii;
+
+writePrecision  8;
+
+writeCompression off;
+
+timeFormat      general;
+
+timePrecision   6;
+
+runTimeModifiable true;
+
+libs ("customBoundaryConditions.so");
+
+functions
+{
+	residuals_air
+  	{
+    	type 	residuals;
+    	libs    ("libutilityFunctionObjects.so");
+            
+    	region	air;
+    	fields	(T cw);
+  	}
+  
+  	residuals_solution
+  	{
+    	type 	residuals;
+    	libs    ("libutilityFunctionObjects.so");
+    
+    	region	solution;
+    	fields	(T cw);
+  	}
+
+	absorbedMassFluxAir
+	{
+    // Mandatory entries (unmodifiable)
+    type            	absorbedMassFlux;
+    libs            	("customFieldFunctionObjects.so");
+	region 				air;
+
+    // Optional entries (runtime modifiable)
+    patches         	(air_to_solution); 
+
+    // Optional (inherited) entries
+    writePrecision  	8;
+    writeToFile     	true;
+    useUserTime     	true;
+    enabled         	true;
+    log             	true;
+    //timeStart       	0;
+    //timeEnd         	1000;
+    executeControl  	timeStep;
+    //executeInterval 	1;
+    writeControl    	timeStep;
+    //writeInterval   	1;    // Mandatory entries (unmodifiable)
+	}
+
+	absorbedMassFluxAirObject
+	{
+    // Mandatory entries (unmodifiable)
+    type            	absorbedMassFluxObject;
+    libs            	("customFieldFunctionObjects.so");
+	region 				air;
+
+    // Optional entries (runtime modifiable)
+    patches         	(air_to_solution); 
+
+    // Optional (inherited) entries
+    writePrecision  	8;
+    writeToFile     	true;
+    useUserTime     	true;
+    enabled         	true;
+    log             	true;
+    //timeStart       	0;
+    //timeEnd         	1000;
+    executeControl  	writeTime;
+    //executeInterval 	1;
+    writeControl    	writeTime;
+    //writeInterval   	1;    // Mandatory entries (unmodifiable)
+	}
+
+	sensibleHeatFluxAir
+	{
+    // Mandatory entries (unmodifiable)
+    type            	sensibleHeatFlux;
+    libs            	("customFieldFunctionObjects.so");
+	region 				air;
+
+    // Optional entries (runtime modifiable)
+    patches         	(air_to_solution); 
+
+    // Optional (inherited) entries
+    writePrecision  	8;
+    writeToFile     	true;
+    useUserTime     	true;
+    enabled         	true;
+    log             	true;
+    //timeStart       	0;
+    //timeEnd         	1000;
+    executeControl  	timeStep;
+    //executeInterval 	1;
+    writeControl    	timeStep;
+    //writeInterval   	1;    // Mandatory entries (unmodifiable)
+	}
+
+	sensibleHeatFluxDensityAirObject
+	{
+    // Mandatory entries (unmodifiable)
+    type            	sensibleHeatFluxDensityObject;
+    libs            	("customFieldFunctionObjects.so");
+	region 				air;
+
+    // Optional entries (runtime modifiable)
+    patches         	(air_to_solution); 
+
+    // Optional (inherited) entries
+    writePrecision  	8;
+    writeToFile     	true;
+    useUserTime     	true;
+    enabled         	true;
+    log             	true;
+    //timeStart       	0;
+    //timeEnd         	1000;
+    executeControl  	writeTime;
+    //executeInterval 	1;
+    writeControl    	writeTime;
+    //writeInterval   	1;    // Mandatory entries (unmodifiable)
+	}
+
+    outletTemperature
+    {
+    region  air;
+    name    outlet;
+    fields  (T);
+
+    operation weightedAverage;
+    weightField phi;
+    #includeEtc "caseDicts/postProcessing/surfaceFieldValue/patch.cfg"
+    }
+
+}
+
+// ************************************************************************* //
