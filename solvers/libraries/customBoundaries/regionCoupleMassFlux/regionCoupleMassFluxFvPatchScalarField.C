@@ -154,7 +154,7 @@ void Foam::regionCoupleMassFluxFvPatchScalarField::updateCoeffs()
     //     (rho.value()*cwDiff.value()))*(-1)
 	// );
 	// Print max and min of gradient
-	Info<< "Min/max gradient:" << min(grad) << ' '
+	Info<< "Min/max gradient: " << min(grad) << " / "
 		<< max(grad) << endl;
 
 	gradient() = grad;

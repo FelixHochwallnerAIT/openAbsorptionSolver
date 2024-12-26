@@ -9,5 +9,5 @@ fvScalarMatrix TEqn
 TEqn.relax();
 eqnResidualT = TEqn.solve().initialResidual();
 
-Info<< "Min/max T:" << min(T).value() << ' '
+Info<< "Min/max T: " << min(T).value() << " / "
 	<< max(T).value() << endl;

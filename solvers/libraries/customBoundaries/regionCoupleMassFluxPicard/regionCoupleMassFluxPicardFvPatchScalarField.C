@@ -197,7 +197,7 @@ void Foam::regionCoupleMassFluxPicardFvPatchScalarField::updateCoeffs()
 	Info<< "Picard iterations: " << ii << "/" << itmax << endl; 
 
 	// Print max and min of gradient
-	Info<< "Min/max gradient:" << min(grad) << ' '
+	Info<< "Min/max gradient: " << min(grad) << " / "
 		<< max(grad) << endl;
 	gradient() = grad;
 	// Only absorption possible
