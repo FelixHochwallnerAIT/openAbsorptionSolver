@@ -172,9 +172,9 @@ The software was intended as a tool to optimize the absorption of falling film a
 
 ## References
 
-- Hochwallner, F., Reichl, C., Emhofer, J. (2021). Frostprävention in Kühlhäusern. *DKV Annual Meeting*, 1014-1027.  
+- Hochwallner, F., Reichl, C., Emhofer, J. (2021). Frostprävention in Kühlhäusern. *47th Annual Meeting of the Deutscher Kaelte und Klimatechnischer Verein 2021*, Vol. 1, pp. 1014-1027.
 - Hochwallner, F., Reichl, C., Emhofer, J. (2023). Reduced modeling of liquid desiccant falling film absorbers. *Applied Thermal Engineering, 225*, 120183. [https://doi.org/10.1016/j.applthermaleng.2023.120183](https://doi.org/10.1016/j.applthermaleng.2023.120183)
-- Hochwallner, F., Stracke, C., Emhofer, J., Reichl, C. (2025). Optimizing falling film absorbers. *Applied Thermal Engineering* (submitted).
+- Hochwallner, F., Stracke, C., Emhofer, J., Reichl, C., 2025. Optimizing the absorption of falling film absorbers with vertical plates utilizing an open-source newly developed CFD solver. *Applied Thermal Engineering* (submitted).
 
 ---
 
