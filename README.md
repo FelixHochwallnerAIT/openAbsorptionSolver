@@ -28,7 +28,6 @@ The absorption process is driven by the vapor pressure difference between the li
 
 ### Directory Structure
 - `./baseCase`: Base OpenFOAM cases for stacked and wire geometries. 
-- `./figures`: Schematic diagrams of the geometries for this README.
 - `./helpingScripts`: Additional supporting scripts for case setup and simulation.  
 - `./pythonScripts`: Python scripts for automated case generation.  
 - `./solvers`: Custom OpenFOAM solvers and libraries.  
