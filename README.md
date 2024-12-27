@@ -179,7 +179,7 @@ The software was intended as a tool to optimize the absorption of falling film a
 
 ## Acknowledgments
 
-This work was funded by the **Austrian Research Promotion Agency (FFG)** under Grant No. 874186.
+This work was funded by the **Austrian Research Promotion Agency (FFG)** under Grant No. 874186. The solver has been extensively tested using the resources of the Vienna Scientific Cluster (VSC).
 
 ---
 
