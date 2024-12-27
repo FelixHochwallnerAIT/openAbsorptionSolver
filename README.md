@@ -10,7 +10,7 @@ This software package simulates the absorption of a liquid desiccant solution fi
 
 The absorption process is driven by the vapor pressure difference between the liquid desiccant solution and the air flow, resulting in mass transfer of water vapor. This process involves heat transfer, including latent heat. A schematic of the geometry is shown below:
 
-![Geometry](./figures/geometry.svg)
+![Geometry](https://ars.els-cdn.com/content/image/1-s2.0-S1359431123002120-gr1.jpg)
 
 ### Key Features
 1. **Custom OpenFOAM solvers:**  
@@ -86,11 +86,11 @@ conda activate openAbsorptionSolver-env
 The software was intended as a tool to optimize the absorption of falling film absorbers with vertical plates. For this reason two different geometries are implemented, a stacked arrangement and a wire case. The software is designed to be flexible and adaptable to other geometries. 
 
 ### Overview of Geometries
-1. **Stacked Arrangement:** Consecutive offset falling films to bring the humid air core into contact with the liquid desiccant film.  
-   ![Stacked arrangement](./figures/stacked_arrangement.svg)
+1. **Stacked Arrangement:** Consecutive offset falling films to bring the humid air core into contact with the liquid desiccant film. 
 
 2. **Wire Geometry:** Multiple wires in the air gap inducing a Kármán vortex street to enhance heat and mass transfer.  
-   ![Wire geometry](./figures/wire.svg)
+
+(Pictures will be added as soon as the current publication is published.)
 
 ### Simulation Process
 
