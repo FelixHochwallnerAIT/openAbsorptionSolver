@@ -127,6 +127,9 @@ The software was intended as a tool to optimize the absorption of falling film a
 11. **Optional: Reconstruction of the full case**  
     If the full case was parallelized, the case has to be reconstructed using the OpenFOAM utilities `reconstructPar -region air`, `reconstructPar -region solution1`, and `reconstructPar -region solution2`.
 
+12. **Check of the full case**  
+   The full case is checked for convergence, and the results are analyzed for physical plausibility
+
 #### Wire Geometry
 1. **Generation of initial case**  
    This case is a 2D case with a single cell in the z-direction and is used to calculate the transient air flow between the wires. The case is generated using the Python script `wire_create_init_case.py`.
@@ -167,6 +170,8 @@ The software was intended as a tool to optimize the absorption of falling film a
 13. **Optional: Reconstruction of the full case**  
     If the full case was parallelized, the case has to be reconstructed using the OpenFOAM utilities `reconstructPar -region air`, `reconstructPar -region solution1`, and `reconstructPar -region solution2`.
 
+14. **Check of the full case**  
+   The full case is checked for convergence, and the results are analyzed for physical plausibility
 ---
 
 ## References
