@@ -1,6 +1,6 @@
 # openAbsorptionSolver
 
-A software package to calculate open absorption of falling film absorbers using OpenFOAM v7 (org).
+A software package to calculate open absorption of falling film absorbers based on OpenFOAM v7 from the OpenFOAM Foundation.
 
 ---
 
@@ -42,7 +42,7 @@ More information on usage and examples can be found in the **Usage Advice** sect
 ## Installation Instructions
 
 ### Prerequisites
-- **OpenFOAM v7 (org)** with `wmake` for compilation.  
+- **OpenFOAM v7** with `wmake` for compilation.  
 - **Python with Conda** for running automation scripts.
 
 ### Steps
