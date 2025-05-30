@@ -35,7 +35,7 @@ The absorption process is driven by the vapor pressure difference between the li
 - `./README.md`: This file.  
 - `./LICENSE`: License file.
 
-More information on usage and examples can be found in the **Usage Advice** section. A more detailed explanation of the technical details of the solver and a comparison with experimental data can be found in the open access publication by Hochwallner et al. (2023), listed in the **References** section. A future publication by Hochwallner et al. (2025), currently under review, will provide a more detailed explanation of the current state of the solver. 
+More information on usage and examples can be found in the **Usage Advice** section. A detailed explanation of the technical aspects of the solver and a comparison with experimental data is available in the open-access publication by Hochwallner et al. (2023). The follow-up publication by Hochwallner et al. (2025) offers an in-depth overview of the solver’s capabilities and its application to two reference cases. Both publications are listed in the **References** section.
 
 ---
 
