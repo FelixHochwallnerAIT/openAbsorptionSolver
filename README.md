@@ -31,7 +31,7 @@ The absorption process is driven by the vapor pressure difference between the li
 - `./helpingScripts`: Additional supporting scripts for case setup and simulation.  
 - `./pythonScripts`: Python scripts for automated case generation.  
 - `./solvers`: Custom OpenFOAM solvers and libraries.
--  '.gitignore': Specifies files and directories to exclude from version control.
+- `./gitignore`: Specifies files and directories to exclude from version control.
 - `./README.md`: This file.  
 - `./LICENSE`: License file.
 
