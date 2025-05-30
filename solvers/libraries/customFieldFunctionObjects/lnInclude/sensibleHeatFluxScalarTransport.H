@@ -1,1 +1,0 @@
-../sensibleHeatFluxScalarTransport/sensibleHeatFluxScalarTransport.H
