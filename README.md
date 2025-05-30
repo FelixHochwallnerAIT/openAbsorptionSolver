@@ -86,10 +86,10 @@ The software was intended as a tool to optimize the absorption of falling film a
 
 ### Overview of Geometries
 1. **Stacked Arrangement:** Consecutive offset falling films to bring the humid air core into contact with the liquid desiccant film. 
+![Stacked Arrangement](https://ars.els-cdn.com/content/image/1-s2.0-S1359431125010701-gr4.jpg)
 
 2. **Wire Geometry:** Multiple wires in the air gap inducing a Kármán vortex street to enhance heat and mass transfer.  
-
-(Pictures will be added as soon as the current publication is published.)
+![Wire Geometry](https://ars.els-cdn.com/content/image/1-s2.0-S1359431125010701-gr2.jpg)
 
 ### Simulation Process
 
@@ -178,7 +178,7 @@ The software was intended as a tool to optimize the absorption of falling film a
 
 - Hochwallner, F., Reichl, C., Emhofer, J. (2021). Frostprävention in Kühlhäusern. *47th Annual Meeting of the Deutscher Kaelte und Klimatechnischer Verein 2021*, Vol. 1, pp. 1014-1027.
 - Hochwallner, F., Reichl, C., Emhofer, J. (2023). Reduced modeling of liquid desiccant falling film absorbers. *Applied Thermal Engineering, 225*, 120183. [https://doi.org/10.1016/j.applthermaleng.2023.120183](https://doi.org/10.1016/j.applthermaleng.2023.120183)
-- Hochwallner, F., Stracke, C., Emhofer, J., Reichl, C., 2025. Design and optimization of falling film absorbers by air flow modification for cold store dehumidification using a newly developed open-source OpenFOAM-based CFD solver. *Applied Thermal Engineering* (submitted).
+- Hochwallner, F., Stracke, C., Emhofer, J., Reichl, C., 2025. Design and optimization of falling film absorbers by air flow modification for cold store dehumidification using a newly developed open-source OpenFOAM-based CFD solver. Applied Thermal Engineering 274, 126478. [https://doi.org/10.1016/j.applthermaleng.2025.126478](https://doi.org/10.1016/j.applthermaleng.2025.126478)
 
 ---
 
