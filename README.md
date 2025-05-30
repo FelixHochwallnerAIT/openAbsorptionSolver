@@ -85,10 +85,12 @@ conda activate openAbsorptionSolver-env
 The software was intended as a tool to optimize the absorption of falling film absorbers with vertical plates. For this reason two different geometries are implemented, a stacked arrangement and a wire case. The software is designed to be flexible and adaptable to other geometries. 
 
 ### Overview of Geometries
-1. **Stacked Arrangement:** Consecutive offset falling films to bring the humid air core into contact with the liquid desiccant film. 
+1. **Stacked Arrangement:** Consecutive offset falling films to bring the humid air core into contact with the liquid desiccant film.
+   
 ![Stacked Arrangement](https://ars.els-cdn.com/content/image/1-s2.0-S1359431125010701-gr4.jpg)
 
-2. **Wire Geometry:** Multiple wires in the air gap inducing a Kármán vortex street to enhance heat and mass transfer.  
+2. **Wire Geometry:** Multiple wires in the air gap inducing a Kármán vortex street to enhance heat and mass transfer.
+   
 ![Wire Geometry](https://ars.els-cdn.com/content/image/1-s2.0-S1359431125010701-gr2.jpg)
 
 ### Simulation Process
