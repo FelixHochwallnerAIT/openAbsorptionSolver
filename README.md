@@ -1,6 +1,6 @@
 # openAbsorptionSolver
 
-A software package to calculate open absorption of falling film absorbers using OpenFOAM v7 (org).
+A software package to calculate open absorption of falling film absorbers based on OpenFOAM v7 from the OpenFOAM Foundation.
 
 ---
 
@@ -10,7 +10,7 @@ This software package simulates the absorption of a liquid desiccant solution fi
 
 The absorption process is driven by the vapor pressure difference between the liquid desiccant solution and the air flow, resulting in mass transfer of water vapor. This process involves heat transfer, including latent heat. A schematic of the geometry is shown below:
 
-![Geometry](./figures/geometry.svg)
+![Geometry](https://ars.els-cdn.com/content/image/1-s2.0-S1359431123002120-gr1.jpg)
 
 ### Key Features
 1. **Custom OpenFOAM solvers:**  
@@ -28,7 +28,6 @@ The absorption process is driven by the vapor pressure difference between the li
 
 ### Directory Structure
 - `./baseCase`: Base OpenFOAM cases for stacked and wire geometries. 
-- `./figures`: Schematic diagrams of the geometries for this README.
 - `./helpingScripts`: Additional supporting scripts for case setup and simulation.  
 - `./pythonScripts`: Python scripts for automated case generation.  
 - `./solvers`: Custom OpenFOAM solvers and libraries.  
@@ -43,7 +42,7 @@ More information on usage and examples can be found in the **Usage Advice** sect
 ## Installation Instructions
 
 ### Prerequisites
-- **OpenFOAM v7 (org)** with `wmake` for compilation.  
+- **OpenFOAM v7** with `wmake` for compilation.  
 - **Python with Conda** for running automation scripts.
 
 ### Steps
@@ -86,11 +85,11 @@ conda activate openAbsorptionSolver-env
 The software was intended as a tool to optimize the absorption of falling film absorbers with vertical plates. For this reason two different geometries are implemented, a stacked arrangement and a wire case. The software is designed to be flexible and adaptable to other geometries. 
 
 ### Overview of Geometries
-1. **Stacked Arrangement:** Consecutive offset falling films to bring the humid air core into contact with the liquid desiccant film.  
-   ![Stacked arrangement](./figures/stacked_arrangement.svg)
+1. **Stacked Arrangement:** Consecutive offset falling films to bring the humid air core into contact with the liquid desiccant film. 
 
 2. **Wire Geometry:** Multiple wires in the air gap inducing a Kármán vortex street to enhance heat and mass transfer.  
-   ![Wire geometry](./figures/wire.svg)
+
+(Pictures will be added as soon as the current publication is published.)
 
 ### Simulation Process
 
@@ -127,6 +126,9 @@ The software was intended as a tool to optimize the absorption of falling film a
 
 11. **Optional: Reconstruction of the full case**  
     If the full case was parallelized, the case has to be reconstructed using the OpenFOAM utilities `reconstructPar -region air`, `reconstructPar -region solution1`, and `reconstructPar -region solution2`.
+
+12. **Check of the full case**  
+   The full case is checked for convergence, and the results are analyzed for physical plausibility
 
 #### Wire Geometry
 1. **Generation of initial case**  
@@ -168,19 +170,21 @@ The software was intended as a tool to optimize the absorption of falling film a
 13. **Optional: Reconstruction of the full case**  
     If the full case was parallelized, the case has to be reconstructed using the OpenFOAM utilities `reconstructPar -region air`, `reconstructPar -region solution1`, and `reconstructPar -region solution2`.
 
+14. **Check of the full case**  
+   The full case is checked for convergence, and the results are analyzed for physical plausibility
 ---
 
 ## References
 
 - Hochwallner, F., Reichl, C., Emhofer, J. (2021). Frostprävention in Kühlhäusern. *47th Annual Meeting of the Deutscher Kaelte und Klimatechnischer Verein 2021*, Vol. 1, pp. 1014-1027.
 - Hochwallner, F., Reichl, C., Emhofer, J. (2023). Reduced modeling of liquid desiccant falling film absorbers. *Applied Thermal Engineering, 225*, 120183. [https://doi.org/10.1016/j.applthermaleng.2023.120183](https://doi.org/10.1016/j.applthermaleng.2023.120183)
-- Hochwallner, F., Stracke, C., Emhofer, J., Reichl, C., 2025. Optimizing the absorption of falling film absorbers with vertical plates utilizing an open-source newly developed CFD solver. *Applied Thermal Engineering* (submitted).
+- Hochwallner, F., Stracke, C., Emhofer, J., Reichl, C., 2025. Design and optimization of falling film absorbers by air flow modification for cold store dehumidification using a newly developed open-source OpenFOAM-based CFD solver. *Applied Thermal Engineering* (submitted).
 
 ---
 
 ## Acknowledgments
 
-This work was funded by the **Austrian Research Promotion Agency (FFG)** under Grant No. 874186.
+This work was funded by the **Austrian Research Promotion Agency (FFG)** under Grant No. 874186. The solver has been extensively tested using the resources of the Vienna Scientific Cluster (VSC).
 
 ---
 
