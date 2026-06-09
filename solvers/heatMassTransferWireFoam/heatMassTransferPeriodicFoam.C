@@ -22,7 +22,7 @@ License
     along with OpenFOAM.  If not, see <http://www.gnu.org/licenses/>.
 
 Application
-    heatMassTransferWireFoam
+    heatMassTransferPeriodicFoam
 
 Description
     A multiregion transient heat and mass transfer solver. 

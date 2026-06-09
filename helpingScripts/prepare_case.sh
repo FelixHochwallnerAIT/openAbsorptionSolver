@@ -6,7 +6,7 @@ case_folder=./workingFolder/wire
 # Switch to case folder
 cd $case_folder
 
-# Prepare case for heatMassTransferWireFoam
+# Prepare case for heatMassTransferPeriodicFoam
 
 # ----------------------
 # Move all time directories (but 0) to periodicFlow directory

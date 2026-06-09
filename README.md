@@ -15,7 +15,7 @@ The absorption process is driven by the vapor pressure difference between the li
 ### Key Features
 1. **Custom OpenFOAM solvers:**  
    - `heatMassTransferFoam`  
-   - `heatMassTransferWireFoam`
+   - `heatMassTransferPeriodicFoam`
 2. **Custom boundary functions:**  
    - Couple manager and region coupling utilities.
 3. **Custom field functions:**  
@@ -157,8 +157,8 @@ The software was intended as a tool to optimize the absorption of falling film a
 8. **Mapping of air flow solution of the initial case on the air region of the full case**  
    The solution of the initial case is mapped on the air region of the full case using the OpenFOAM utility `mapFields -consistent -targetRegion air -sourceTime X ../wire_init`, where `X` is the time step of the initial case and `../wire_init` is the directory of the initial case. This has to be done for all time steps of the initial case. The mapping is done using the bash script `map_fields.sh` in the `./helpingScripts` directory.
 
-9. **Prepare the full case for the `heatMassTransferWireFoam` solver**  
-   The `periodicFlow` directory and `periodicFlowDict` file have to be created to use the `heatMassTransferWireFoam` solver. In this folder, the time steps of the periodic air flow are written, and the time steps are listed in the `periodicFlowDict` file. This is done using the bash script `prepare_case.sh` in the `./helpingScripts` directory.
+9. **Prepare the full case for the `heatMassTransferPeriodicFoam` solver**  
+   The `periodicFlow` directory and `periodicFlowDict` file have to be created to use the `heatMassTransferPeriodicFoam` solver. In this folder, the time steps of the periodic air flow are written, and the time steps are listed in the `periodicFlowDict` file. This is done using the bash script `prepare_case.sh` in the `./helpingScripts` directory.
 
 10. **Optional: Presimulate a steady-state solution**  
     To speed up the simulation, it is beneficial to start with a steady-state solution of the absorption problem before starting the transient simulation. A steady-state solution can be calculated using the `heatMassTransferFoam` solver. The bash script `simulate_steady_state.sh` in the `./helpingScripts` directory helps prepare the case for this, by taking the first time directory of the `periodicFlow` folder, modifying the `controlDict` and `fvSchemes` for steady-state, and adding relaxation factors. The steady-state solution is then calculated using the `heatMassTransferFoam` solver. To post-process the steady-state solution, the bash script `post_process_steady_state.sh` in the `./helpingScripts` directory can be used. The script writes the steady-state solution as the initial condition for the following transient simulation and reverts the changes in the `controlDict`, `fvSchemes`, and relaxation factors for the transient simulation.
@@ -167,7 +167,7 @@ The software was intended as a tool to optimize the absorption of falling film a
     The full case can be decomposed to increase computational speed. The initial decomposition at the creation of the case by the Python script `wire_create_case.py` is not valid anymore, as the air flow solution of the initial case is mapped on the air region of the full case. However, the initial decomposition is necessary to compute the required cell allocations for this decomposition. The decomposition is done using the bash script `decompose_wire.sh` in the `./helpingScripts` directory, which decomposes all time steps of the `periodicFlow` folder for all regions and writes the decomposed time steps into the `periodicFlow` folder of each processor folder.
 
 12. **Simulation of the full case**  
-    The full case is simulated using the OpenFOAM solver `heatMassTransferWireFoam`.
+    The full case is simulated using the OpenFOAM solver `heatMassTransferPeriodicFoam`.
 
 13. **Optional: Reconstruction of the full case**  
     If the full case was parallelized, the case has to be reconstructed using the OpenFOAM utilities `reconstructPar -region air`, `reconstructPar -region solution1`, and `reconstructPar -region solution2`.

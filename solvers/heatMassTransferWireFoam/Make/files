@@ -3,6 +3,6 @@ pimpleMultiFluidRegionControl/pimpleMultiFluidRegionControl.C
 
 fluid/icoCourantNo.C
 
-heatMassTransferWireFoam.C
+heatMassTransferPeriodicFoam.C
 
-EXE = $(FOAM_USER_APPBIN)/heatMassTransferWireFoam
+EXE = $(FOAM_USER_APPBIN)/heatMassTransferPeriodicFoam

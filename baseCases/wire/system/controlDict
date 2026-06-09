@@ -10,7 +10,7 @@ FoamFile
  object controlDict;
 }
 
-application heatMassTransferWireFoam;
+application heatMassTransferPeriodicFoam;
 
 startFrom latestTime;
 
